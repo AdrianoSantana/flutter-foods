@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foods/components/main_drawer.dart';
 import 'package:foods/screens/categories_screen.dart';
 import 'package:foods/screens/favourite_screen.dart';
 
@@ -35,6 +36,7 @@ class _TabsScreenState extends State<TabsScreen> {
         centerTitle: true,
         title: Text(screens[_selectedScreenIndex]['title'] as String),
       ),
+      drawer: MainDrawer(),
       body: screens[_selectedScreenIndex]['screen'] as Widget,
       bottomNavigationBar: BottomNavigationBar(
         unselectedItemColor: Colors.white,
